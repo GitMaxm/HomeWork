@@ -17,4 +17,4 @@ else
     max = Num2;
     min = Num1;
 }
-Console.WriteLine("Max: " + max + " Min: " + min);
+Console.WriteLine("Max: " + max + " Min: " + min); 
