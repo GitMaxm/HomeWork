@@ -13,7 +13,7 @@ if (number > 99 && number < 1000)
     Num2 = number / 10 % 10;
     //Num3 = number % 10;
 
-    Console.Write("Вторая цифра: " + Num2);
+    Console.WriteLine("Вторая цифра: " + Num2);
 }
 else
 {
