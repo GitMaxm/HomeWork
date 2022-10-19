@@ -12,11 +12,5 @@ if (number == 6) Console.Write("Суббота ");
 if (number == 7) Console.Write("Воскресенье ");
 
 
-if (number < 6) 
-{ 
-    Console.WriteLine("будний день");
-}
-else
-{
-    Console.WriteLine("выходной день");
-}
+if (number < 6 ) Console.WriteLine("будний день");
+if (number > 5 && number <=7) Console.WriteLine("выходной день");
