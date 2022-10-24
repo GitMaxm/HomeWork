@@ -14,10 +14,4 @@ int[] CreateArray(int size, int minValue, int maxValue)
 
 int GetFindMaxMin(int[] array);
 {
-    int max = 0;
-    for (int j = 0; j < array.Length; j++)
-    {
-        if(array[i] > arra)
-    }
 
-}
