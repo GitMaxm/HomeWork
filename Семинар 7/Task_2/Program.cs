@@ -6,12 +6,11 @@
 
 
 
-Console.WriteLine("enter m: ");
+Console.Write("Номер строки: ");
 int m = int.Parse(Console.ReadLine());
-Console.WriteLine("enter n: ");
+Console.Write("Номер стобца: ");
 int n = int.Parse(Console.ReadLine());
-
-int[,] array = new int[m, n];
+int[,] array = new int[5, 5];
 int[,] GetArray(int m, int n)
 
 {
@@ -21,7 +20,7 @@ int[,] GetArray(int m, int n)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = rnd.Next(1, 50);
+            array[i, j] = rnd.Next(1, 20);
         }
     }
     return array;
@@ -45,8 +44,8 @@ if (n > array.GetLength(0) || m > array.GetLength(1))
     Console.WriteLine("Такого элемента нет");
 }
 else
-{
-    Console.WriteLine($"Значение элемента {n} строки и {m} столбца равно {array[n - 1, m - 1]}");
+{                                                                    // Не понимаю как тут выводить элемент
+    Console.WriteLine($"Значение элемента {m} строки и {n} столбца равно {array[n-1, m-1]}");
 }
 
 PrintArray(GetArray(m, n));
