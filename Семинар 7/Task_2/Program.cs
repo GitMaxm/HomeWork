@@ -37,6 +37,8 @@ void PrintArray(int[,] array)
 
 }
 
+array = GetArray(m,n);
+
 if (m > array.GetLength(0) || n > array.GetLength(1))
 {
     Console.WriteLine("Такого элемента нет");
@@ -46,5 +48,5 @@ else
     Console.WriteLine($"Значение элемента {m} строки и {n} столбца равно {array[m-1, n-1]}");
 }
 
-PrintArray(GetArray(m, n));
+PrintArray(array);
 
