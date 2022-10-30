@@ -5,16 +5,14 @@
 //8 4 2 4
 
 
-
 Console.Write("Номер строки: ");
 int m = int.Parse(Console.ReadLine());
 Console.Write("Номер стобца: ");
 int n = int.Parse(Console.ReadLine());
 int[,] array = new int[5, 5];
+
 int[,] GetArray(int m, int n)
-
 {
-
     Random rnd = new Random();
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -39,13 +37,14 @@ void PrintArray(int[,] array)
 
 }
 
-if (n > array.GetLength(0) || m > array.GetLength(1))
+if (m > array.GetLength(0) || n > array.GetLength(1))
 {
     Console.WriteLine("Такого элемента нет");
 }
 else
-{                                                                    // Не понимаю как тут выводить элемент
-    Console.WriteLine($"Значение элемента {m} строки и {n} столбца равно {array[n-1, m-1]}");
+{                                                                    
+    Console.WriteLine($"Значение элемента {m} строки и {n} столбца равно {array[m-1, n-1]}");
 }
 
 PrintArray(GetArray(m, n));
+
