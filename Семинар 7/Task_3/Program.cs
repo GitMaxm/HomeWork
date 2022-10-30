@@ -8,7 +8,7 @@ Console.Write("Номер строки: ");
 int m = int.Parse(Console.ReadLine());
 Console.Write("Номер стобца: ");
 int n = int.Parse(Console.ReadLine());
-int[,] array = new int[n, m];
+int[,] array = new int[m, n];
 
 int[,] GetArray(int m, int n)
 {
@@ -37,6 +37,7 @@ void PrintArray(int[,] array)
 
 }
 
+array = GetArray(m,n);
 
 for (int i = 0; i < array.GetLength(0); i++)
 {
@@ -45,8 +46,8 @@ for (int i = 0; i < array.GetLength(0); i++)
     {
  avarage = (avarage + array[i, j]);
     }
- avarage = avarage / n;
- Console.Write(avarage);
+ avarage = avarage / m;
+ Console.Write(avarage + "; ");
 }
 
 Console.WriteLine();
