@@ -75,9 +75,9 @@ int[,] DivMatrix(int[,] array1, int[,] array2)
     for (int i = 0; i < array1.GetLength(0); ++i)
         for (int j = 0; j < array2.GetLength(0); ++j)
             for (int k = 0; k < array2.GetLength(1); ++k)
-                m[i, k] += array1[i, j] * array2[j, k];
+                m[i, k] = m[i, k] + array1[i, j] * array2[j, k];
     return m;
 }
 
 int[,] m = DivMatrix(array1, array2);
-Console.WriteLine($"Сумма матриц: {m}");
+Console.WriteLine($"Произведение двух матриц: {m}");
