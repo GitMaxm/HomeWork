@@ -27,13 +27,13 @@ GetNumbersMN(M, N);
 
 void PrintSum(int M, int N, int sum)
 {
-    sum = sum + M;
-    if (M <= N)
+    if (M > N) 
     {
-        Console.Write($"Сумма натуральных элементов: {sum}");
+        Console.WriteLine($"Сумма натуральных элементов в промежутке от M до N: {sum}"); 
         return;
     }
-    PrintSum(M, N - 1, sum);
+    sum = sum + (M++);
+    PrintSum(M, N, sum);
 }
 
-PrintSum(M, N - 1, sum);
+PrintSum(M, N, 0);
