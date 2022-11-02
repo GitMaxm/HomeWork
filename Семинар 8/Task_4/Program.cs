@@ -21,17 +21,16 @@ void PrintMatrix(int[,,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        Console.Write("[");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             for (int k = 0; k < matrix.GetLength(2); k++)
             {
-                Console.Write($"{matrix[i, j, k],1} ");
+                Console.WriteLine($"Индексы: i: {i}, j: {j}, k: {k}. Значение: {matrix[i, j, k]} ");
             }
         }
-        Console.WriteLine("]");
+        Console.WriteLine();
     }
 }
 
-int[,,] array3D = CreateMatrix(2, 2, 2, 10, 99);
+int[,,] array3D = CreateMatrix(3, 3, 1, 10, 99);
 PrintMatrix(array3D);
